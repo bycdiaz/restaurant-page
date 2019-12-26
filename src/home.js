@@ -1,7 +1,20 @@
-const createNav = () => {
-  const content = document.querySelector('.content');
-  content.innerHTML = '';
+import Image from './la.jpg';
 
+const content = document.querySelector('.content');
+
+const createImage = () => {
+  const myImage = new Image();
+  myImage.src = Image;
+  content.appendChild(myImage);
+};
+
+const createTitle = () => {
+  const title = document.createElement('h1');
+  title.innerText = 'The LA Cafe';
+  content.appendChild(title);
+};
+
+const createNav = () => {
   const navbar = document.createElement('ul');
   content.appendChild(navbar);
 
@@ -28,7 +41,10 @@ const createNav = () => {
 };
 
 const createHome = () => {
+  content.innerHTML = '';
+  createTitle();
   createNav();
+  createImage();
 };
 
 export { createHome };
