@@ -1,4 +1,4 @@
-const navbar = () => {
+const createNav = () => {
   const content = document.querySelector('.content');
   content.innerHTML = '';
 
@@ -25,10 +25,10 @@ const navbar = () => {
   contactLink.href = '';
   contactLink.innerText = 'Contact';
   contact.appendChild(contactLink);
-}
+};
 
 const createHome = () => {
-  navbar();
-}
+  createNav();
+};
 
-export { createHome }
+export { createHome };
