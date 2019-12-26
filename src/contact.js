@@ -1,17 +1,11 @@
+import { createHome } from './home.js'
 import { createMenu } from './menu.js'
-import { createContact } from './contact.js'
 
 const content = document.querySelector('.content');
 
-// const createImage = () => {
-//   const myImage = new Image();
-//   myImage.src = Image;
-//   content.appendChild(myImage);
-// };
-
 const createTitle = () => {
   const title = document.createElement('h1');
-  title.innerText = 'The LA Cafe - Home Page';
+  title.innerText = 'The LA Cafe - Contact Page';
   content.appendChild(title);
 };
 
@@ -47,18 +41,17 @@ const createNav = () => {
   contact.appendChild(contactLink);
 };
 
-const createDescription = () => {
-  const description = document.createElement('h4');
-  description.innerText = 'Come by the LA Cafe for the best LA type cafe food in Los Angeles!';
-  content.appendChild(description);
+const createContactInfo = () => {
+  const contact = document.createElement('div');
+  contact.innerText = 'This is the contact page!';
+  content.appendChild(contact);
 };
 
-const createHome = () => {
+const createContact = () => {
   content.innerHTML = '';
   createTitle();
   createNav();
-  // createImage();
-  createDescription();
+  createContactInfo();
 };
 
-export { createHome };
+export { createContact };
