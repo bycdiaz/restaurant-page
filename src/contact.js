@@ -8,15 +8,15 @@ const createContactInfo = () => {
   content.appendChild(contact);
 
   const name = document.createElement('p');
-  name.innerText = 'Carlos';
+  name.innerText = 'Name: Carlos';
   contact.appendChild(name);
 
   const email = document.createElement('p');
-  email.innerText = 'emailme@email.com';
+  email.innerText = 'Email: emailme@email.com';
   contact.appendChild(email);
 
   const phone = document.createElement('p');
-  phone.innerText = '555-555-5555';
+  phone.innerText = 'Phone: 555-555-5555';
   contact.appendChild(phone);
 };
 

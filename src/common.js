@@ -1,6 +1,7 @@
 import { createHome } from './home.js'
 import { createContact } from './contact.js'
 import { createMenu } from './menu.js'
+import Image from './la.jpg';
 
 const content = document.querySelector('.content');
 
@@ -42,9 +43,17 @@ const createNav = () => {
   contact.appendChild(contactLink);
 };
 
+const createImage = () => {
+  const background = document.createElement('img');
+  background.className = 'background';
+  background.src = Image;
+  content.appendChild(background);
+};
+
 const createCommon = () => {
   createTitle();
   createNav();
+  createImage();
 };
 
 export { createCommon };
